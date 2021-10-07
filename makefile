@@ -1,4 +1,6 @@
-SRC =	main.c
+SRC =	main.c \
+utils.c \
+fctmlx.c
 
 NAME = Fractol
 

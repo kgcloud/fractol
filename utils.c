@@ -1,27 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   start.c                                            :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: canjugun <canjugun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/26 22:39:05 by canjugun          #+#    #+#             */
-/*   Updated: 2021/09/28 20:43:06 by canjugun         ###   ########.fr       */
+/*   Created: 2021/10/07 19:10:42 by canjugun          #+#    #+#             */
+/*   Updated: 2021/10/07 19:25:57 by canjugun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
-#include <mlx.h>
-
-
-
-int	main(void)
+int	ft_strcmp(char *s1, char *s2)
 {
-	t_vars	vars;
+	int i;
 
-	vars.mlx = mlx_init();
-	vars.win = mlx_new_window(vars.mlx, 640, 480, "Hello world!");
-	//mlx_key_hook(vars.win, key_hook, &vars);
-	mlx_hook(vars.win, 2, 53, cclose, &vars);
-	mlx_loop(vars.mlx);
+	i = 0;
+	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+		i++;
+	return (s1[i] - s2[i]);
+}
+
+int	print(char *str)
+{
+	int	i;
+
+	i = -1;
+	while (str[++i])
+		write(1, &str[i], 1);
+	write(1, "\n", 1);
+	return (-1);
+}
+
+void	ft_bzero(void *s, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		((char *)s)[i] = 0;
+		i++;
+	}
 }
