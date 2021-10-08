@@ -6,17 +6,17 @@
 /*   By: canjugun <canjugun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 19:12:10 by canjugun          #+#    #+#             */
-/*   Updated: 2021/10/07 19:12:26 by canjugun         ###   ########.fr       */
+/*   Updated: 2021/10/08 20:29:02 by canjugun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void	my_mlx_pixel_put(t_data *data, int x, int y, int color)
+void	my_mlx_pixel_put(t_fractol	*kg, int x, int y, int color)
 {
 	char	*dst;
 
-	dst = data->addr + (y * data->line_length + x * (data->bits_per_pixel / 8));
+	dst = kg->addr + (y * kg->line_length + x * (kg->bits_per_pixel / 8));
 	*(unsigned int*)dst = color;
 }
 
