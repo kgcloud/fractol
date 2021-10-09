@@ -6,7 +6,7 @@
 /*   By: canjugun <canjugun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 15:56:46 by canjugun          #+#    #+#             */
-/*   Updated: 2021/10/08 20:55:32 by canjugun         ###   ########.fr       */
+/*   Updated: 2021/10/09 16:56:03 by canjugun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FRACTOL_H
 
 # include <math.h>
+# include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
 # include "mlx/mlx.h"
